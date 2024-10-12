@@ -1,0 +1,185 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light background color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Column layout for the body */
+    align-items: center; /* Center align elements */
+    height: 100vh; /* Full height for centering */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #f4f4f4; /* Light text for dark mode */
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%; /* Full width for navbar */
+    background-color: #4CAF50; /* Green background for navbar */
+    padding: 15px; /* Padding for navbar */
+    display: flex; /* Flex display for navbar */
+    justify-content: end; /* Space between items */
+    align-items: center; /* Center items vertically */
+    color: white; /* White text for navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for navbar */
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 600px; /* Maximum width for the container */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly opaque background */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+    margin-top: 20px; /* Space above the container */
+}
+
+/* Task input styles */
+.task-input {
+    display: flex; /* Use flex for layout */
+    flex-direction: column; /* Align items in a column */
+    gap: 10px; /* Space between items */
+    margin-bottom: 20px; /* Space below the input section */
+}
+
+/* Input field styles */
+.task-input input[type="text"],
+.task-input input[type="date"],
+.task-input select {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Button styles */
+.task-input button {
+    padding: 10px 15px; /* Button padding */
+    background: #4CAF50; /* Green background for buttons */
+    color: white; /* White text for buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth transition for hover */
+}
+
+.task-input button:hover {
+    background: #388E3C; /* Darker green on hover */
+}
+
+/* Search container styles */
+.search-container {
+    display: flex; /* Flex display for search */
+    align-items: center; /* Center align items */
+    gap: 10px; /* Space between search elements */
+}
+
+/* Sort options styles */
+.sort-options {
+    display: flex; /* Flex display for sort options */
+    align-items: center; /* Center align items */
+    gap: 10px; /* Space between sort options */
+    margin-top: 10px; /* Space above sort options */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders are merged */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px; /* Padding for table cells */
+    text-align: left;
+    border: 1px solid #ddd; /* Visible border for cells */
+}
+
+th {
+    background: rgba(255, 255, 255, 0.8); /* Light background for headers */
+}
+
+/* Task item styles */
+.task-item {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for visibility */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0; /* Space between task items */
+    display: flex; /* Flex display for items */
+    flex-direction: column; /* Align task item elements in a column */
+    justify-content: flex-start; /* Align items at the start of the column */
+}
+
+/* Checkbox styles */
+.task-item input[type="checkbox"] {
+    margin-right: 10px; /* Spacing between checkbox and text */
+}
+
+/* Edit and Delete button styles */
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px; /* Space between buttons */
+}
+
+.edit-btn {
+    background-color: #ffc107; /* Yellow for edit */
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+}
+
+/* Button hover effects */
+.edit-btn:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Notification styles */
+.notification {
+    background-color: #ff9800; /* Orange background for notifications */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .task-input {
+        flex-direction: column; /* Stack inputs on small screens */
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    .task-input input[type="text"],
+    .task-input input[type="date"],
+    .task-input select {
+        margin-bottom: 10px; /* Space between stacked inputs */
+    }
+
+    .task-input button {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+
+    .search-container,
+    .sort-options {
+        flex-direction: column; /* Stack search and sort on small screens */
+        align-items: stretch; /* Stretch items to full width */
+    }
+}

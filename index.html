@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do Application</title>
+</head>
+<body>
+    <div class="navbar">
+        <label for="darkModeToggle">Dark Mode</label>
+        <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    </div>
+    <div class="container">
+        <h1>To-Do Application</h1>
+        
+        <div class="task-input">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" placeholder="Enter task name" required>
+            
+            <label for="priority">Priority:</label>
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" required>
+            
+            <button id="addTaskButton">Add Task</button>
+        </div>
+        
+        <div class="search-container">
+            <label for="searchInput">Search Task:</label>
+            <input type="text" id="searchInput" placeholder="Search by task name">
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div class="sort-options">
+            <label for="sortOptions">Sort by:</label>
+            <select id="sortOptions" onchange="sortTasks()">
+                <option value="none">Sort by</option>
+                <option value="dueDate">Due Date</option>
+                <option value="priority">Priority</option>
+            </select>
+        </div>
+        
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+                <!-- Task items will be appended here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
